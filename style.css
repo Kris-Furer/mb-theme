@@ -1,0 +1,78 @@
+/*
+Theme Name:  Fancy Builders Theme
+Theme URI: http://yourwebsite.com/theme
+Author: Kris
+Author: http://yourwebsite.com/
+Description: A minimal theme for a service based company
+Version:1.0
+License: GNU General Public License v2 or later
+Tags: minimal, cool
+ */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+a,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+:root {
+  --accent: #3284A7;
+  --white: #FBFCFF;
+}
+
+h1 {
+font-family: 'Playfair Display', serif;
+font-size: 3.75
+}
+
+p {
+  font-family: 'Barlow', sans-serif;
+}
+
+.my-btn {
+  padding:12px;
+  background-color:var(--accent);
+  color:var(--white);
+  border-radius: 3px
+}
+
+nav {
+  height: 100px;
+  color: black;
+}
+
+.landing-section {
+  height:80vh;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+
+
+
+
+
+
+.mob-button {
+  display: none;
+  font-size: 20px;
+}
+
+/* Media Queries ::::::::::::::::::::::::*/
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mob-button {
+    display: block;
+  }
+}
