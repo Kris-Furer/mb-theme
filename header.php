@@ -33,7 +33,7 @@
 
     <!-- Nav Starts -->
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg px-5">
       <div class="container-fluid">
     <!-- logo -->
         <a class="navbar-brand" href="<?php echo home_url();?>">
