@@ -11,7 +11,6 @@
                 <a class="navbar-brand" href="<?php echo home_url();?>">
                   <span class= "fw-bold">Masterton</span>Builders
                 </a>
-
               </div>
 
 

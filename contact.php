@@ -12,7 +12,8 @@ Template Name: Contact Page Template
 
 <div class="row">
           <div class="col-12 text-center contact-hero">
-            <h1 class="form-title">Get in Touch</h1>
+            <h1 class="display-2">Get in Touch</h1>
+            <p class="lead">Lets plan your dream home</p>
           </div>
       </div>
 

@@ -13,6 +13,12 @@ Tags: minimal, cool
   box-sizing: border-box;
   list-style: none;
 }
+
+:root {
+  --accent: #3284A7;
+  --white: #FBFCFF;
+}
+
 a,
 a:visited,
 a:active,
@@ -21,43 +27,49 @@ a:hover {
   text-decoration: none;
 }
 
-footer {
-  color: white;
+img {
+  max-width:100%;
 }
 
+.hero-img {
+height:100%;
+object-fit: cover;
+}
 
-:root {
-  --accent: #3284A7;
-  --white: #FBFCFF;
+body {
+  font-family:'Barlow', sans-serif;
 }
 
 h1 {
 font-family: 'Playfair Display', serif;
-font-size: 3.75
+
+}
+
+h2,
+h2,
+.serif{
+font-family: 'Playfair Display', serif;
+}
+
+.bold{
+  font-weight:700!important;
 }
 
 .font-italic {
   font-style: italic;
 }
 
-.serif {
-font-family: 'Playfair Display', serif;
-}
-
 p {
   font-family: 'Barlow', sans-serif;
+  font-size:1.2rem;
 }
 
-.my-btn {
-  padding:12px;
-  background-color:var(--accent);
-  color:var(--white);
-  border:none;
-}
+
 
 nav {
   height: 100px;
   color: black;
+  font-size: 19px;
 }
 
 .navbar-nav ul  {
@@ -67,15 +79,29 @@ nav a {
   padding:20px;
 }
 
+.navbar-brand {
+  font-size: 24px;
+}
+
+
+.my-btn {
+  padding:12px;
+  background-color:var(--accent);
+  color:var(--white);
+  border:none;
+}
+
 .landing-section {
   height:80vh;
 }
 
-
 .contact-hero {
   background: #474747;
   color: var(--white);
-  padding:8rem 0;
+  padding:12rem 0;
+  background-image: url('images/contact.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .profile-img {
@@ -86,14 +112,19 @@ nav a {
   color: white;
 }
 
-
-
-
+.testimonial-pic {
+  width:80px;
+}
+footer {
+  color: white;
+  font-weight:100;
+}
 
 .mob-button {
   display: none;
   font-size: 20px;
 }
+
 
 /* Media Queries ::::::::::::::::::::::::*/
 @media (max-width: 768px) {
