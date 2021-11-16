@@ -2,7 +2,7 @@
 
   <div class="container-fluid">
     <!-- Landing Section -->
-    <div class="row landing-section mb-5">
+    <div class="row section mb-5">
 
       <div class="col-sm-12 col-md-5 d-flex align-items-center">
         <div class="px-5 my-5">
@@ -18,9 +18,9 @@
 
 
     <!-- Section 2 Starts -->
-    <div class="row landing-section my-5">
-      <div class="col-sm-12 col-md-7 bg-secondary">
-        <img src="" alt="">
+    <div class="row section my-5">
+      <div class="col-sm-12 col-md-7 ps-0">
+        <img class="section-img" src="<?php echo get_template_directory_uri().'/images/picture2.png' ?>" alt="">
       </div>
       <div class="col-sm-12 col-md-4 d-flex align-items-center">
         <div class="ps-5">
@@ -33,7 +33,7 @@
 
 
 <!-- Section 3 Starts  -->
-<div class="row landing-section mb-5">
+<div class="row section mb-5">
   <div class="col-sm-12 col-md-6 d-flex align-items-center">
     <div class="px-5">
       <h2 class='display-3'>Quality builders, quality<span class="font-italic"> homes</span></h2>
@@ -41,15 +41,17 @@
       <a class='my-btn' href="#">Enquire now</a>
     </div>
   </div>
-  <div class="col-sm-12 col-md-6 bg-secondary">
-    <img src="" alt="">
+  <div class="col-sm-12 col-md-6 pe-0">
+      <img class="section-img" src="<?php echo get_template_directory_uri().'/images/picture-3.png' ?>" alt="">
   </div>
 </div>
 
 
 <!-- Testimonial Section  -->
 <div class="row mx-5 my-5 justify-content-center">
-
+  <h2 class='display-5 text-center my-5'>
+    Testimonials
+  </h2>
   <div class="card col-3 testimonial-card p-3 m-3">
     <h5 class='card-title mb-0'>Julie Smith</h5>
     <div class="circle py-3">
@@ -72,9 +74,6 @@
 
     <p class="card-text font-italic">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim."</p>
   </div>
-
-
-
 </div>
 
 

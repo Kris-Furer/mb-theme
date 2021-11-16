@@ -7,5 +7,5 @@
               else : echo '<p>There are no posts!</p>';
           endif;
           ?>
-          <p>index page</p>
+          <p>Hey Yo</p>
 <?php get_footer(); ?>

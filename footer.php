@@ -8,7 +8,7 @@
         <div class="container py-4">
             <div class="row gy-4 gx-5">
               <div class="col-lg-4 col-md-6">
-                <a class="navbar-brand" href="<?php echo home_url();?>">
+                <a class="footer-heading" href="<?php echo home_url();?>">
                   <span class= "fw-bold">Masterton</span>Builders
                 </a>
               </div>

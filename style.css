@@ -31,9 +31,17 @@ img {
   max-width:100%;
 }
 
-.hero-img {
-height:100%;
-object-fit: cover;
+.section {
+  height:100%;
+  margin-bottom: 100px;
+}
+
+
+.hero-img,
+.section-img {
+height:101vh;
+object-fit: cover!important;
+overflow: hidden;
 }
 
 body {
@@ -75,14 +83,18 @@ nav {
 .navbar-nav ul  {
   display: flex;
 }
+
+.footer-nav ul{
+  padding-left:0!important;
+}
 nav a {
   padding:20px;
 }
 
 .navbar-brand {
-  font-size: 24px;
-}
+  font-size: 30px;
 
+}
 
 .my-btn {
   padding:12px;
@@ -91,9 +103,6 @@ nav a {
   border:none;
 }
 
-.landing-section {
-  height:80vh;
-}
 
 .contact-hero {
   background: #474747;
@@ -118,6 +127,14 @@ nav a {
 footer {
   color: white;
   font-weight:100;
+}
+
+footer p {
+font-size: 1rem;
+margin:0;
+}
+.footer-heading {
+font-size: 1.6rem;
 }
 
 .mob-button {
