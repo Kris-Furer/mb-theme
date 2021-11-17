@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+<div class="container-fluid">
+
+<div class="row mx-5">
+
+
           <?php
           if (have_posts() ) :
               while (have_posts() ) : the_post(); ?>
@@ -7,5 +12,6 @@
               else : echo '<p>There are no posts!</p>';
           endif;
           ?>
-          <p>Hey Yo</p>
+</div>
+          </div>
 <?php get_footer(); ?>

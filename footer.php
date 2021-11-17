@@ -4,7 +4,7 @@
 
 
     <!-- FOOTER -->
-    <footer class="w-100 py-4 flex-shrink-0 bg-dark">
+    <footer class="w-100 py-4 flex-shrink-0">
         <div class="container py-4">
             <div class="row gy-4 gx-5">
               <div class="col-lg-4 col-md-6">

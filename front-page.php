@@ -6,7 +6,7 @@
 
       <div class="col-sm-12 col-md-5 d-flex align-items-center">
         <div class="px-5 my-5">
-          <h1 class="display-1 mb-0">Building for <span class="font-italic"> your</span> future</h1>
+          <h1 class="display-1 mb-0">Building for <span class="font-italic"> your</span> future <?php echo $hero_image?></h1>
           <p class="py-3 lead">local builders you can trust, no job to big or to small</p>
           <a class='my-btn' href="#">Enquire now</a>
         </div>

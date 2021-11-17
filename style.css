@@ -14,9 +14,22 @@ Tags: minimal, cool
   list-style: none;
 }
 
+
+
 :root {
   --accent: #3284A7;
-  --white: #FBFCFF;
+  --my-background: #ffffff;
+  --btn-color: #3284A7;
+  --btn-text:#FBFCFF;
+  --footer_color:#212529;
+  --text_color:#212529;
+  --btn-text:rgb(255, 255, 255);
+}
+
+
+body {
+  background-color: var(--my-background);
+  color:var(--text_color)
 }
 
 a,
@@ -73,7 +86,6 @@ p {
 }
 
 
-
 nav {
   height: 100px;
   color: black;
@@ -98,17 +110,17 @@ nav a {
 
 .my-btn {
   padding:12px;
-  background-color:var(--accent);
-  color:var(--white);
+  background-color:var(--btn-color);
+  color:var(--btn-text);
   border:none;
 }
 
 
 .contact-hero {
   background: #474747;
-  color: var(--white);
+  color: rgb(255, 255, 255);
   padding:12rem 0;
-  background-image: url('images/contact.png');
+  background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('images/contact.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -127,6 +139,7 @@ nav a {
 footer {
   color: white;
   font-weight:100;
+  background-color: var(--footer_color)
 }
 
 footer p {
