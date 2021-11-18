@@ -2,14 +2,14 @@
 function generate_customization_css() {
 
 
-  if ( get_theme_mod( 'hero_image' ) ) {
-  				$hero_image = get_theme_mod( 'hero_image' );
+  if (get_theme_mod('hero_image')) {
+  				$contact_hero_image = get_theme_mod('hero_image');
   			} else {
-  				$hero_image = get_stylesheet_directory_uri().'images/hero.png';
+  				$contact_hero_image = get_stylesheet_directory_uri().'/images/contact.png';
   			}
 
   ?>
-    <style type="text/css" class="tim2">
+    <style type="text/css">
 
     :root {
       --my-background:#<?php echo get_theme_mod('background_color'); ?>;
@@ -20,12 +20,16 @@ function generate_customization_css() {
 
     }
 
-
-
-
+    .contact-hero {
+    background-image:url(<?php
+  if (get_theme_mod('contact_image')) : echo get_theme_mod( 'contact_image');
+  else: echo get_template_directory_uri().'/images/contact.png'; endif; ?> )
+  }
 
     </style>
-<?php  }
+<?php
+}
+
 add_action('wp_head', 'generate_customization_css');
 
 ?>

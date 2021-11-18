@@ -12,8 +12,8 @@ Template Name: Contact Page Template
 
 <div class="row">
           <div class="col-12 text-center contact-hero">
-            <h1 class="display-2">Get in Touch</h1>
-            <p class="lead">Lets plan your dream home</p>
+            <h1 class="display-2"><?php echo get_theme_mod('contact_heading') ?></h1>
+            <p class="lead"><?php echo get_theme_mod('contact_subhead')?></p>
           </div>
       </div>
 
@@ -22,11 +22,11 @@ Template Name: Contact Page Template
   <div class="">
     <div class="mb-5">
       <h4 class='serif'>Flick Us An Email</h4>
-      <p>info@mastertonbuilders.com</p>
+      <p><?php echo get_theme_mod('contact_email')?></p>
     </div>
     <div class="phone">
       <h4 class='serif'>Give Us A Bell</h4>
-      <p>info@mastertonbuilders.com</p>
+      <p><?php echo get_theme_mod('contact_phone')?></p>
     </div>
   </div>
 

@@ -6,13 +6,18 @@
 
       <div class="col-sm-12 col-md-5 d-flex align-items-center">
         <div class="px-5 my-5">
-          <h1 class="display-1 mb-0">Building for <span class="font-italic"> your</span> future <?php echo $hero_image?></h1>
-          <p class="py-3 lead">local builders you can trust, no job to big or to small</p>
+          <h1 class="display-1 mb-0"><?php echo get_theme_mod('call_to_action')?></span> </h1>
+
+          <p class="py-3 lead"><?php echo get_theme_mod('subhead_text')?></p>
           <a class='my-btn' href="#">Enquire now</a>
         </div>
       </div>
       <div class="col-sm-12 col-md-7 p-0">
-          <img class="hero-img" src="<?php echo get_template_directory_uri().'/images/hero.png'?>" alt="">
+          <?php if (get_theme_mod( 'hero_image' )) { ?>
+              <img class="hero-img" src="<?php echo get_theme_mod( 'hero_image')?>" alt=""> <?php } else { ?>
+
+              <img class="section-img" src="<?php echo get_template_directory_uri().'/images/hero.png'?>" alt="">
+              <?php } ?>
       </div>
     </div>
 
@@ -20,12 +25,15 @@
     <!-- Section 2 Starts -->
     <div class="row section my-5">
       <div class="col-sm-12 col-md-7 ps-0">
-        <img class="section-img" src="<?php echo get_template_directory_uri().'/images/picture2.png' ?>" alt="">
+
+        <img src="<?php if (get_theme_mod( 'section_2_image' )) : echo get_theme_mod( 'section_2_image');
+        else: echo get_template_directory_uri().'/images/picture2.png'; endif; ?>" alt="">
+
       </div>
       <div class="col-sm-12 col-md-4 d-flex align-items-center">
         <div class="ps-5">
           <h2 class="display-3">Building<span class="font-italic"> your</span> dream house</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
+          <p><?php echo get_theme_mod('section2_text') ?>
           </p>
         </div>
       </div>
@@ -37,12 +45,13 @@
   <div class="col-sm-12 col-md-6 d-flex align-items-center">
     <div class="px-5">
       <h2 class='display-3'>Quality builders, quality<span class="font-italic"> homes</span></h2>
-      <p class='py-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+      <p class='py-2'><?php echo get_theme_mod('section3_text') ?></p>
       <a class='my-btn' href="#">Enquire now</a>
     </div>
   </div>
   <div class="col-sm-12 col-md-6 pe-0">
-      <img class="section-img" src="<?php echo get_template_directory_uri().'/images/picture-3.png' ?>" alt="">
+    <img src="<?php if (get_theme_mod( 'section_3_image' )) : echo get_theme_mod( 'section_3_image');
+  else: echo get_template_directory_uri().'/images/picture-3.png'; endif; ?>" alt="">
   </div>
 </div>
 
