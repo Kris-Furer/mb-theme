@@ -56,11 +56,11 @@
 </div>
 
 <!-- Testimonial Section  -->
-<div class="row m-5 justify-content-center">
-  <h2 class='display-5 text-center my-5'>
+<div class="row p-5 justify-content-center testimonial-section">
+  <h2 class='display-5 text-center py-5'>
     Testimonials
   </h2>
-<?php echo do_shortcode("[testimonial_view id='2']"); ?>
+<?php echo do_shortcode("[testimonial_view id='1']"); ?>
 
 </div>
 

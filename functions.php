@@ -9,28 +9,46 @@ add_theme_support('woocommerce');
 register_nav_menus(['primary'=> 'primary']);
 register_nav_menus(['footer'=> 'footer']);
 
-  function custom_theme_assets() {
+function custom_theme_assets() {
   wp_enqueue_style('my-custom-style', get_stylesheet_uri());
+
   }
   add_action('wp_enqueue_scripts', 'custom_theme_assets');
 
+
+// Add custom js file
+function add_custom_js() {
+  wp_enqueue_script('custom', get_stylesheet_directory_uri().'/js/custom.js',
+  array(), false, true);
+
+  wp_enqueue_script('mb-jquery', "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+  array(), true);
+
+
+
+
+  }
+add_action('wp_enqueue_scripts', 'add_custom_js');
+
+
+
   // Add custom post type for team members:::::::::::::::::::::::::::::::::::::
-  function create_team_posttype() {
-    // set up the arguments
-    $args = array(
-      'labels' => array(
+function create_team_posttype() {
+// set up the arguments
+  $args = array(
+        'labels' => array(
         //name of the post type
         'name' => 'Team', // name shown is the dashboard
         'singular_name' => 'post'
-      ),
-      'public' => true,
-      'menu_icon' => 'dashicons-admin-users',
-      'supports' => array('title', 'editor', 'thumbnail')
-    );
+        ),
+        'public' => true,
+        'menu_icon' => 'dashicons-admin-users',
+        'supports' => array('title', 'editor', 'thumbnail')
+      );
     // Within our function, we need to register the post type
     register_post_type('team', $args);
   }
-  add_action('init','create_team_posttype');
+add_action('init','create_team_posttype');
 
 
   // Add metabox:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

@@ -38,10 +38,10 @@
 
     <!-- Nav Starts -->
 
-    <nav class="navbar navbar-expand-lg px-5">
+    <nav class="navbar navbar-expand-lg px-md-5 px-sm-1">
       <div class="container-fluid">
     <!-- logo -->
-        <a class="navbar-brand" href="<?php echo home_url();?>">
+        <a class="navbar-brand px-0" href="<?php echo home_url();?>">
           <span class="bold">Masterton</span>Builders
         </a>
 

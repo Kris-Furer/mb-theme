@@ -325,18 +325,21 @@ function customise_about_page ($wp_customize) {
       "type" => "textarea"
     ));
 
-    // Add a hero image to about page - setting
+    // Add second image to About page - setting
     $wp_customize->add_setting("about_image_2", array(
       "default" => ""
     ));
 
-    // Add a hero to about page - control
+    // Add a second image to about page - control
     $wp_customize->add_control(new WP_Customize_Image_Control(
       $wp_customize, 'about_image_2', array(
         'label' => 'Upload second image on about page',
         'settings' => 'about_image_2',
         'section' => 'about_page_settings',
       )));
+
+
+
 
 }
 

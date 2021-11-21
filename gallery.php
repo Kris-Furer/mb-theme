@@ -12,7 +12,10 @@ Template Name: Gallery Page Template
 
 <div class="container-fluid">
   <h1 class="display-1 m-5">Gallery</h1>
-  <div class="row mx-5 my-5">
+  <div class="row mx-md-5 my-5 ">
+    <div class="col-12 mx-auto">
+
+
     <?php
     if (have_posts() ) :
         while (have_posts() ) : the_post(); ?>
@@ -22,7 +25,7 @@ Template Name: Gallery Page Template
     endif;
     ?>
   </div>
-
+  </div>
 
 </div>
 

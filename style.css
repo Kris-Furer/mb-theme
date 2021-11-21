@@ -102,7 +102,6 @@ nav a {
 
 .navbar-brand {
   font-size: 30px;
-
 }
 
 .my-btn {
@@ -165,6 +164,17 @@ transform: scale(1.2);
 .testimonial-pic {
   width:80px;
 }
+
+.testimonial-section {
+  background-color:rgb(241, 241, 241);
+  padding:8vw!important;
+}
+
+.strong-view.wpmtst-default .wpmtst-testimonial, .strong-view.wpmtst-default .wpmtst-testimonial, .wpmtst-testimonial-inner {
+  border:none!important;
+}
+
+
 footer {
   color: white;
   font-weight:100;
@@ -181,17 +191,57 @@ font-size: 1.6rem;
 
 .mob-button {
   display: none;
-  font-size: 20px;
+  font-size: 1.5rem;
 }
-
+.my-mob-overlay {
+display: none;
+}
 
 /* Media Queries ::::::::::::::::::::::::*/
 @media (max-width: 768px) {
-  .desktop-nav {
-    display: none;
-  }
 
   .mob-button {
     display: block;
   }
+
+  .mob-close {
+    position: absolute;
+    top: 50px;
+    right:30px;
+    font-size: 30px;
+  }
+
+
+  .mob-menu {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 200;
+    padding-top: 10%;
+  }
+
+
+
+  .mob-menu ul {
+    padding-left:0;
+  }
+
+  .my-mob-overlay {
+  
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  Z-index:1000;
+  width:100vw!important;
+  height:100vh!important;
+  position:fixed!important;
+  top:0!important;
+  background-color:var(--footer_color);
+  color:white;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+
 }
