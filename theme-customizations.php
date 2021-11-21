@@ -21,7 +21,7 @@
 
     // ### Footer Background Color
     $wp_customize->add_setting("footer_color", array(
-    "default" => ""
+    "default" => "#1b1b1b"
     ));
     $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'footer_color', array(
       'label' => 'Footer background color',
@@ -31,7 +31,7 @@
 
     // ### Text Color
     $wp_customize->add_setting("text_color", array(
-      "default" => ""
+      "default" => "black"
     ));
     $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'text_color', array(
       'label' => 'Text Colour',
@@ -43,7 +43,7 @@
 
     // Button Background
     $wp_customize->add_setting("button_color", array(
-      "default" => "#3284A7"
+      "default" => "#3284A7;"
     ));
 
     $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'button_color', array(
@@ -250,3 +250,94 @@ function customise_contact_page ($wp_customize) {
 }
 
 add_action("customize_register", "customise_contact_page");
+
+
+
+// --------------------------------------------------------
+//                 About Page Settings
+// --------------------------------------------------------
+
+function customise_about_page ($wp_customize) {
+  $wp_customize->add_section("about_page_settings", array(
+    "title" => "About Page Settings",
+    "priority" => 0
+  ));
+
+  // Add a hero image to about page - setting
+  $wp_customize->add_setting("about_image", array(
+    "default" => ""
+  ));
+
+  // Add a hero to about page - control
+  $wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize, 'about_image', array(
+      'label' => 'Upload main image on about page',
+      'settings' => 'about_image',
+      'section' => 'about_page_settings',
+    )));
+
+    // Change About Page Heading
+    $wp_customize->add_setting("about_heading", array(
+    "default" => "About Us"
+    ));
+
+    $wp_customize->add_control("about_heading", array(
+      "label" => "Enter about heading",
+      "section" => "about_page_settings",
+      "settings" => "about_heading",
+      "type" => "text"
+    ));
+
+    // Change About Us Paragraph
+    $wp_customize->add_setting("about_paragraph", array(
+    "default" => "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. "
+    ));
+
+    $wp_customize->add_control("about_paragraph", array(
+      "label" => "Enter About Us Paragraph",
+      "section" => "about_page_settings",
+      "settings" => "about_paragraph",
+      "type" => "textarea"
+    ));
+
+
+    // Change About Part 2 Heading
+    $wp_customize->add_setting("about_heading_2", array(
+    "default" => "Our Process"
+    ));
+
+    $wp_customize->add_control("about_heading_2", array(
+      "label" => "Enter A Heading For the second text section",
+      "section" => "about_page_settings",
+      "settings" => "about_heading_2",
+      "type" => "text"
+    ));
+
+    // Change About Part 2 Paragraph
+    $wp_customize->add_setting("about_paragraph_2", array(
+    "default" => "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beata"
+    ));
+
+    $wp_customize->add_control("about_paragraph_2", array(
+      "label" => "Enter Paragraph for second text section",
+      "section" => "about_page_settings",
+      "settings" => "about_paragraph_2",
+      "type" => "textarea"
+    ));
+
+    // Add a hero image to about page - setting
+    $wp_customize->add_setting("about_image_2", array(
+      "default" => ""
+    ));
+
+    // Add a hero to about page - control
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+      $wp_customize, 'about_image_2', array(
+        'label' => 'Upload second image on about page',
+        'settings' => 'about_image_2',
+        'section' => 'about_page_settings',
+      )));
+
+}
+
+add_action("customize_register", "customise_about_page");

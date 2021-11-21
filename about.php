@@ -12,27 +12,70 @@ Template Name: About Page Template
   <div class="row landing-section">
     <div class="col-md-6 col-sm-12 d-flex px-5 align-items-center">
       <div class="">
-        <h1 class="display-3">About Us</h1>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+        <h1 class="display-3"><?php echo get_theme_mod('about_heading') ?></h1>
+        <p><?php echo get_theme_mod('about_paragraph') ?></p>
       </div>
 
     </div>
     <div class="col-md-6 col-sm-12 p-md-0">
-      <img class="hero-img" src="<?php echo get_template_directory_uri().'/images/drill.png'?>" alt="">
+      <img src="<?php if (get_theme_mod( 'about_image' )) : echo get_theme_mod( 'about_image');
+    else: echo get_template_directory_uri().'/images/drill.png'; endif; ?>" alt="">
     </div>
   </div>
 
 
 <!-- Our Team Section -->
-  <div class="row my-5 text-center">
+  <!-- <div class="row my-5 text-center">
     <div class="col-12">
-    <h2 class='display-5'>
-      Our Team
-    </h2>
+
     </div>
+  </div> -->
+
+
+
+  <div class="row m-5 team-section d-flex align-items-center">
+    <div class="row">
+      <h2 class='display-5 text-center my-5'>
+        Our Team
+      </h2>
+
+    <?php
+        query_posts(array(
+          'post_type' => team
+          )
+        );
+        ?>
+
+        <?php
+              if (have_posts() ) :
+                  while (have_posts() ) : the_post(); ?>
+                  <?php $title_input = get_post_meta(get_the_ID(), 'title_input', true); ?>
+                  <!-- here's the area where it loops over each post -->
+                  <div class="col col-md-3 col-sm-6">
+                       <div class="profile-img">
+                          <?php the_post_thumbnail("medium", ['class'=>'profile-pic']); ?>
+                       </div>
+                             <p class="fw-bold mb-0"><?php the_title() ?></p>
+                              <p class="font-italic"><?php   echo $title_input; ?></p>
+
+                       </div>
+
+              <?php endwhile;
+                  else : echo '<p>There are no posts!</p>';
+              endif;
+              ?>
+  </div>
+</div>
+<!-- container fluid ends -->
   </div>
 
-  <div class="row m-5">
+
+
+
+
+
+<!-- Hard Coded Team Template -->
+  <!-- <div class="row m-5">
     <div class="col-md-3 col-sm-6">
       <div class="profile-img bg-secondary">Image Here</div>
       <p class="fw-bold mb-0">John Doe</p>
@@ -53,19 +96,18 @@ Template Name: About Page Template
       <p class="fw-bold mb-0">John Doe</p>
       <p class='font-italic'>Owner</p>
     </div>
-  </div>
+  </div> -->
 
 <!-- Our process section -->
   <div class="row my-5">
     <div class="col-8 px-5">
-      <h2 class="display-5">Our Process</h2>
+      <h2 class="display-5 my-3"><?php echo get_theme_mod('about_heading_2') ?></h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br>
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <?php echo get_theme_mod('about_paragraph_2') ?>
       </p>
     </div>
-    <div class="col-4 bg-secondary">
-      <img src="" alt="image here">
+    <div class="col-4">
+      <img src="<?php echo get_theme_mod('about_image_2') ?>" alt="image here">
     </div>
   </div>
 

@@ -9,7 +9,7 @@
           <h1 class="display-1 mb-0"><?php echo get_theme_mod('call_to_action')?></span> </h1>
 
           <p class="py-3 lead"><?php echo get_theme_mod('subhead_text')?></p>
-          <span class='my-btn' href="#">Enquire now</span>
+          <a class='my-btn' href="#">Enquire now</a>
         </div>
       </div>
       <div class="col-sm-12 col-md-7 p-0">
@@ -55,8 +55,8 @@
   </div>
 </div>
 
-<!-- Testimonial Section  -->
-<div class="row m-5 justify-content-center">
+
+<div class="row mx-5 justify-content-center">
   <h2 class='display-5 text-center my-5'>
     Testimonials
   </h2>
@@ -64,6 +64,33 @@
 
 </div>
 
+
+<!-- Testimonial Section  -->
+<div class="row mx-5 my-5 justify-content-center">
+
+  <div class="card col-3 testimonial-card p-3 m-3">
+    <h5 class='card-title mb-0'>Julie Smith</h5>
+    <div class="circle py-3">
+        <img class="testimonial-pic" src="<?php echo get_template_directory_uri().'/images/profile1.jpg'?>" alt="">
+    </div>
+    <p class="card-text font-italic">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim."</p>
+  </div>
+  <div class="card col-3 testimonial-card p-3 m-3">
+    <h5 class='card-title mb-0'>Julie Smith</h5>
+    <div class="circle py-3">
+        <img class="testimonial-pic" src="<?php echo get_template_directory_uri().'/images/profile1.jpg'?>" alt="">
+    </div>
+    <p class="card-text font-italic">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim."</p>
+  </div>
+  <div class="card col-3 testimonial-card p-3 m-3">
+    <h5 class='card-title mb-0'>Julie Smith</h5>
+    <div class="circle py-3">
+        <img class="testimonial-pic" src="<?php echo get_template_directory_uri().'/images/profile1.jpg'?>" alt="">
+    </div>
+
+    <p class="card-text font-italic">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim."</p>
+  </div>
+</div>
 
 
     <!-- Container Fluid Ends -->

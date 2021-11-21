@@ -13,7 +13,7 @@ Template Name: Contact Page Template
 <div class="row">
           <div class="col-12 text-center contact-hero">
             <h1 class="display-2"><?php echo get_theme_mod('contact_heading') ?></h1>
-            <p class="lead"><?php echo get_theme_mod('contact_subhead')?></p>
+            <p class="lead w-100"><?php echo get_theme_mod('contact_subhead')?></p>
           </div>
       </div>
 

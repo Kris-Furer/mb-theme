@@ -21,7 +21,7 @@ function generate_customization_css() {
     }
 
     .contact-hero {
-    background-image:url(<?php
+    background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(<?php
   if (get_theme_mod('contact_image')) : echo get_theme_mod( 'contact_image');
   else: echo get_template_directory_uri().'/images/contact.png'; endif; ?> )
   }
