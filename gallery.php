@@ -12,7 +12,7 @@ Template Name: Gallery Page Template
 
 <div class="container-fluid">
   <h1 class="display-1 m-5">Gallery</h1>
-  <div class="row mx-md-5 my-5 ">
+  <div class="row mx-md-5 my-5 mx-sm-0">
     <div class="col-12 mx-auto">
 
 

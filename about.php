@@ -102,7 +102,7 @@ Template Name: About Page Template
   <div class="row my-5">
     <div class="col-8 px-5">
       <h2 class="display-5 my-3"><?php echo get_theme_mod('about_heading_2') ?></h2>
-      <p>
+      <p class="w-75">
         <?php echo get_theme_mod('about_paragraph_2') ?>
       </p>
     </div>
