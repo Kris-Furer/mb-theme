@@ -60,7 +60,7 @@
   <h2 class='display-5 text-center py-5'>
     Testimonials
   </h2>
-<?php echo do_shortcode("[testimonial_view id='1']"); ?>
+<?php echo do_shortcode("[testimonial_view id='2']"); ?>
 
 </div>
 
@@ -68,4 +68,8 @@
 
     <!-- Container Fluid Ends -->
   </div>
+
+
+
+
 <?php get_footer(); ?>

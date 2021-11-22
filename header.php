@@ -38,7 +38,7 @@
 
     <!-- Nav Starts -->
 
-    <nav class="navbar navbar-expand-lg px-md-5 px-sm-1">
+    <nav class="navbar navbar-expand px-md-5 px-sm-1">
       <div class="container-fluid">
     <!-- logo -->
         <a class="navbar-brand px-0" href="<?php echo home_url();?>">
@@ -46,10 +46,24 @@
         </a>
 
           <i class="fas fa-bars mob-button"></i>
-            <ul class="navbar-nav gap-2 desktop-nav">
+            <ul class="navbar-nav desktop-nav">
               <!-- Take Menu pages from Worpress -->
               <?php $menu_args = ['theme_location' => 'primary', 'menu_class' => "navbar-nav  ms-md-auto gap-2"]; ?>
               <?php wp_nav_menu($menu_args); ?>
             </ul>
           </div>
         </nav>
+
+        <div class="my-mob-overlay">
+
+          <div class="mob-inner">
+      <i id="closeMob" class="fas fa-close mob-close"></i>
+            <h1 class="display-1">Menu</h1>
+            <?php
+            $menu_args = ['theme_location' => 'footer', 'menu_class' => "mob-menu"];
+            wp_nav_menu($menu_args);
+              ?>
+
+
+          </div>
+        </div>

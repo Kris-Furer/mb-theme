@@ -45,11 +45,6 @@ img {
   min-width: 100%;
 }
 
-.section {
-
-}
-
-
 .hero-img,
 .section-img {
 height:101vh;
@@ -60,7 +55,6 @@ overflow: hidden;
 
 h1 {
 font-family: 'Playfair Display', serif;
-
 }
 
 h2,
@@ -105,27 +99,25 @@ nav a {
 }
 
 .my-btn {
-  padding:12px;
-  background-color:var(--btn-color);
-  color:var(--btn-text);
-  border:none;
+  padding:12px 30px;
+
 }
 
-.my-btn, .contact-btn {
-transition: 1s;
+.my-btn, .contact-btn a {
+transition: .5s all ease;
+background-color:var(--btn-color);
+color:var(--btn-text);
+border: 1px solid var(--btn-color);
 }
-.my-btn:hover, .contact-btn:hover {
-transform: scale(1.2);
+.my-btn:hover, .contact-btn a:hover {
+background-color: var(--my-background);
+color:var(--btn-color);
+border: 1px solid var(--btn-color);
 }
-
-
 
 .contact-btn a {
-  background-color: var(--btn-color);
-  color: var(--btn-text);
   padding:12px 50px;
 }
-
 
 .contact-hero {
   background: #474747;
@@ -146,7 +138,6 @@ transform: scale(1.2);
 .profile-img {
   width: 100%;
   height:70%;
-
 }
 
 .profile-pic {
@@ -154,7 +145,6 @@ transform: scale(1.2);
   height:100%;
   object-fit:cover!important;
 }
-
 
 .secondary-cta {
   padding:7rem 0;
@@ -195,9 +185,56 @@ font-size: 1.6rem;
 }
 .my-mob-overlay {
 display: none;
+z-index: 20000;
 }
 
 /* Media Queries ::::::::::::::::::::::::*/
+@media (max-width: 900px) {
+
+  .mob-button {
+    display: block;
+  }
+
+  .mob-close {
+    position: absolute;
+    top: 50px;
+    right:30px;
+    font-size: 30px;
+  }
+
+
+  .mob-menu {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 200;
+    padding-top: 10%;
+  }
+
+
+
+  .mob-menu ul {
+    padding-left:0;
+  }
+
+  .my-mob-overlay {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  Z-index:1000;
+  width:100vw!important;
+  height:100vh!important;
+  position:fixed!important;
+  top:0!important;
+  background-color:var(--footer_color);
+  color:white;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+
+}
 @media (max-width: 768px) {
 
   .mob-button {
@@ -226,7 +263,6 @@ display: none;
   }
 
   .my-mob-overlay {
-  
   justify-content: center;
   flex-direction: column;
   align-items: center;
