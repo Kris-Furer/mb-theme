@@ -78,8 +78,8 @@ font-family: 'Playfair Display', serif;
 p {
   font-family: 'Barlow', sans-serif;
   font-size:1.2rem;
+  font-weight: 100;
 }
-
 
 nav {
   height: 100px;
@@ -132,9 +132,7 @@ border: 1px solid var(--btn-color);
   background-size: cover;
 }
 
-
 .team-section {
-  height:100vh;
   max-width: 1300px;
   margin:auto!important;
 }
@@ -151,7 +149,7 @@ border: 1px solid var(--btn-color);
 }
 
 .secondary-cta {
-  padding:7rem 0;
+  padding:10rem 0;
   color: white;
 }
 
@@ -167,7 +165,6 @@ border: 1px solid var(--btn-color);
 .strong-view.wpmtst-default .wpmtst-testimonial, .strong-view.wpmtst-default .wpmtst-testimonial, .wpmtst-testimonial-inner {
   border:none!important;
 }
-
 
 footer {
   color: white;
@@ -194,7 +191,6 @@ z-index: 20000;
 
 /* Media Queries ::::::::::::::::::::::::*/
 @media (max-width: 900px) {
-
   .mob-button {
     display: block;
   }
@@ -206,15 +202,12 @@ z-index: 20000;
     font-size: 30px;
   }
 
-
   .mob-menu {
     text-align: center;
     font-size: 23px;
     font-weight: 200;
     padding-top: 10%;
   }
-
-
 
   .mob-menu ul {
     padding-left:0;
@@ -236,8 +229,6 @@ z-index: 20000;
   .desktop-nav {
     display: none;
   }
-
-
 }
 
 @media (max-width:768px) {
@@ -251,10 +242,6 @@ z-index: 20000;
 .section {
  height:auto;
  margin:100px 0px;
-}
-
-.col-sm-12 {
-height:auto!important;
 }
 
 .image-section {

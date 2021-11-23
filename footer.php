@@ -4,17 +4,18 @@
 
 
     <!-- FOOTER -->
-    <footer class="w-100 py-4 flex-shrink-0">
-        <div class="container py-4">
+    <footer class="w-100 py-4">
+        <div class="container text-center text-md-start py-4">
             <div class="row gy-4 gx-5">
-              <div class="col-lg-4 col-md-6">
+
+              <div class="col-12 col-md-4">
                 <a class="footer-heading" href="<?php echo home_url();?>">
                   <span class= "fw-bold">Masterton</span>Builders
                 </a>
               </div>
 
 
-                <div class="col-lg-4 col-md-6 footer-left">
+                <div class="col-12 col-md-4  footer-left">
                     <h5 class="text-white mb-3 footer-heading">Quick links</h5>
 
                       <?php
@@ -23,7 +24,7 @@
                         ?>
                 </div>
 
-                <div class="col-lg-4 col-md-6 text-white">
+                <div class="col-12 col-md-4 text-white">
                     <h5 class="mb-3 footer-heading">Contact</h5>
                     <p>Masterton Builders</p>
                     <p>171 Teapapa Rd, Masterton, 2159</p>

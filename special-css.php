@@ -26,6 +26,16 @@ function generate_customization_css() {
   else: echo get_template_directory_uri().'/images/contact.png'; endif; ?> )
   }
 
+  .secondary-cta {
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(<?php
+  if (get_theme_mod('secondary_cta')) : echo get_theme_mod( 'secondary_cta');
+  else: echo get_template_directory_uri().'/images/cta-2.png'; endif; ?> )
+}
+
+
+
     </style>
 <?php
 }
