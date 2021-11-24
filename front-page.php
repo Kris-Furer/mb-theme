@@ -3,18 +3,7 @@
   <div class="container-fluid">
     <!-- Landing Section -->
     <div class="row section mb-5">
-<<<<<<< Updated upstream
-      <!-- Landing Text -->
-      <div class="col-sm-12 col-md-5 d-flex align-items-center text-section order-sm-2">
-        <div class="px-md-5 my-md-5">
-          <h1 class="display-1 mb-0"><?php echo get_theme_mod('call_to_action')?></span> </h1>
-          <p class="py-3 lead"><?php echo get_theme_mod('subhead_text')?></p>
-          <span class='my-btn' href="#">Enquire now</span>
-        </div>
-      </div>
-=======
 
->>>>>>> Stashed changes
       <!-- Landing Image -->
       <div class="col-sm-12 col-md-7 p-md-0  image-section order-md-2">
           <?php if (get_theme_mod( 'hero_image' )) { ?>
