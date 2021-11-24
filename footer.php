@@ -10,7 +10,8 @@
 
               <div class="col-12 col-md-4">
                 <a class="footer-heading" href="<?php echo home_url();?>">
-                  <span class= "fw-bold">Masterton</span>Builders
+                  <p class="fs-2 mb-3 footer-logo"><span class="fw-bold">Masterton</span>Builders</p>
+
                 </a>
               </div>
 

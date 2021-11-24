@@ -60,7 +60,7 @@
 </div>
 
 <!-- Testimonial Section  -->
-<div class="row px-md-5 my-5 justify-content-center testimonial-section">
+<div class="row px-md-5 mt-5 justify-content-center testimonial-section">
   <div class="col-12">
     <h2 class='display-5 text-center py-5'>
       Testimonials

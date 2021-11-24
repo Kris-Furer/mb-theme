@@ -27,9 +27,13 @@ Tags: minimal, cool
 body {
   background-color: var(--my-background);
   color:var(--text_color);
-  overflow-x: hidden;
+  overflow-x:hidden!important;
   margin:auto;
   font-family:'Barlow', sans-serif;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 a,
@@ -49,7 +53,8 @@ img {
 .section-img {
 height:101vh;
 width:100%;
-object-fit: cover!important;
+object-fit: cover;
+
 
 }
 
@@ -75,6 +80,9 @@ font-family: 'Playfair Display', serif;
   font-style: italic;
 }
 
+.max-text {
+  max-width: 500px;
+}
 p {
   font-family: 'Barlow', sans-serif;
   font-size:1.2rem;
@@ -91,7 +99,7 @@ nav {
   display: flex;
 }
 
-.footer-nav ul{
+.menu-footer-container ul{
   padding-left:0!important;
 }
 nav a {
@@ -131,23 +139,33 @@ border: 1px solid var(--btn-color);
   background-repeat: no-repeat;
   background-size: cover;
 }
+.about-img {
+  height:80vh;
+  object-fit:cover;
 
+}
 
 .team-section {
-  height:100vh;
   max-width: 1300px;
   margin:auto!important;
+  padding: 10vw 0;
+
 }
+
 
 .profile-img {
   width: 100%;
-  height:70%;
+  height:28vw;
 }
 
 .profile-pic {
   width:100%;
   height:100%;
   object-fit:cover!important;
+}
+
+.footer-logo, .footer-heading {
+  line-height: 2rem;
 }
 
 .secondary-cta {
@@ -193,6 +211,13 @@ z-index: 20000;
 }
 
 /* Media Queries ::::::::::::::::::::::::*/
+@media (min-width:1400px) {
+  .profile-img {
+    height:22vw;
+  }
+}
+
+
 @media (max-width: 900px) {
 
   .mob-button {
@@ -234,7 +259,6 @@ z-index: 20000;
   }
 
 
-}
 
 @media (max-width:768px) {
 
@@ -245,16 +269,24 @@ z-index: 20000;
   object-fit: cover!important;
 }
 
+.about-img {
+  max-height: 50vh;
+}
+
 .section {
  height:auto;
-
 }
 
-.image-section {
+.profile-img {
+  height:60vw;
+}
 
+.max-text {
+  max-width: 98%
+}
 }
 
 
-
+@media (max-width:400) {
 
 }
