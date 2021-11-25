@@ -11,7 +11,7 @@
 
     // ### Background Color
     $wp_customize->add_setting("background_color", array(
-    "default" => ""
+    "default" => "#fcfcfc"
     ));
     $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'background_color', array(
       'label' => 'Background Colour',
@@ -31,13 +31,25 @@
 
     // ### Text Color
     $wp_customize->add_setting("text_color", array(
-      "default" => "black"
+      "default" => "#1b1b1b"
     ));
     $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'text_color', array(
       'label' => 'Text Colour',
       'section' => 'site_colors',
       'settings' => 'text_color'
     )));
+
+    // ### Footer Text
+    $wp_customize->add_setting("footer_text_color", array(
+      "default" => "white"
+    ));
+    $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'footer_text_color', array(
+      'label' => 'Footer Text Colour',
+      'section' => 'site_colors',
+      'settings' => 'footer_text_color'
+    )));
+
+
 
     // ### Buttons ------------------------------------------------------
 
@@ -54,7 +66,7 @@
 
     //  Button Text
     $wp_customize->add_setting("button_text_color", array(
-      "default" => "#ffffff"
+      "default" => "#fcfcfc"
     ));
 
     $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'button_text_color', array(

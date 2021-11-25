@@ -17,7 +17,7 @@
 
 
                 <div class="col-12 col-md-4  footer-left">
-                    <h5 class="text-white mb-3 footer-heading">Quick links</h5>
+                    <h5 class="mb-3 footer-heading">Quick links</h5>
 
                       <?php
                       $menu_args = ['theme_location' => 'footer', 'menu_class' => "footer-nav"];
@@ -25,12 +25,12 @@
                         ?>
                 </div>
 
-                <div class="col-12 col-md-4 text-white">
+                <div class="col-12 col-md-4">
                     <h5 class="mb-3 footer-heading">Contact</h5>
                     <p>Masterton Builders</p>
                     <p>171 Teapapa Rd, Masterton, 2159</p>
-                    <p>Phone: 021 618 922</p>
-                    <p>Email: info@mastertonbuilders.com</p>
+                    <p><?php echo get_theme_mod('contact_phone') ?></p>
+                    <p><?php echo get_theme_mod('contact_email') ?></p>
                 </div>
             </div>
         </div>

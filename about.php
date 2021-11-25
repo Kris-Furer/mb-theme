@@ -48,7 +48,7 @@ Template Name: About Page Template
                   <!-- here's the area where it loops over each post -->
                   <div class="col-6 col-md-3 team-member">
                        <div class="profile-img">
-                          <?php the_post_thumbnail("medium", ['class'=>'profile-pic']); ?>
+                          <?php the_post_thumbnail("large", ['class'=>'profile-pic']); ?>
                        </div>
                               <p class="fw-bold mb-0"><?php the_title() ?></p>
                               <p class="font-italic"><?php   echo $title_input; ?></p>
@@ -84,7 +84,10 @@ Template Name: About Page Template
     <div class="col col-md-5 px-md-5">
       <h1 class="mb-0">Ready To Start?</h1>
       <p class="my-3">lets have a chat about your dream home</p>
-      <button class="my-btn">Enquire Now</button>
+      <a href="contact">
+          <button class="my-btn">Enquire Now</button>
+      </a>
+
     </div>
   </div>
   <!-- container fluid ends -->

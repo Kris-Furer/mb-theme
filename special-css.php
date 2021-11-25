@@ -16,7 +16,9 @@ function generate_customization_css() {
       --btn-color:<?php echo get_theme_mod('button_color'); ?>;
       --btn-text:<?php echo get_theme_mod('button_text_color'); ?>;
       --footer_color:<?php echo get_theme_mod('footer_color'); ?>;
+      --footer_text_color:<?php echo get_theme_mod('footer_text_color'); ?>;
       --text_color:<?php echo get_theme_mod('text_color'); ?>;
+
 
     }
 

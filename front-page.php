@@ -2,13 +2,13 @@
 
   <div class="container-fluid">
     <!-- Landing Section -->
-    <div class="row section mb-5">
+    <div class="row mb-5 landing-section section">
 
       <!-- Landing Image -->
       <div class="col-sm-12 col-md-7 p-md-0  image-section order-md-2">
           <?php if (get_theme_mod( 'hero_image' )) { ?>
               <img class="hero-img" src="<?php echo get_theme_mod( 'hero_image')?>" alt=""> <?php } else { ?>
-              <img class="section-img" src="<?php echo get_template_directory_uri().'/images/hero.png'?>" alt="">
+              <img class="hero-img" src="<?php echo get_template_directory_uri().'/images/hero.png'?>" alt="">
           <?php } ?>
       </div>
 
@@ -17,7 +17,9 @@
         <div class="px-md-5 my-md-5">
           <h1 class="display-1 mb-0 mt-3"><?php echo get_theme_mod('call_to_action')?></span> </h1>
           <p class="py-3 lead"><?php echo get_theme_mod('subhead_text')?></p>
-          <span class='my-btn' href="#">Enquire now</span>
+          <a href="contact">
+          <span class='my-btn'>Enquire now</span>
+          </a>
         </div>
       </div>
     </div>
@@ -41,7 +43,7 @@
 
 
 <!-- Section 3 Starts  -->
-<div class="row section my-5">
+<div class="row section mt-5">
   <!-- Section 3 Image -->
   <div class="col-sm-12 col-md-6 pe-md-0 image-section order-md-2">
     <img class="section-img" src="<?php if (get_theme_mod( 'section_3_image' )) : echo get_theme_mod( 'section_3_image');
@@ -53,25 +55,36 @@
     <div class="p-md-5">
       <h2 class='display-3 mt-3'>Quality builders, quality<span class="font-italic"> homes</span></h2>
       <p class='py-2'><?php echo get_theme_mod('section3_text') ?></p>
-      <a class='my-btn' href="#">Enquire now</a>
+      <a class='my-btn' href="contact">Enquire now</a>
     </div>
   </div>
 
 </div>
 
 <!-- Testimonial Section  -->
-<div class="row px-md-5 mt-5 justify-content-center testimonial-section">
+<div class="row px-md-5 justify-content-center testimonial-section">
   <div class="col-12">
     <h2 class='display-5 text-center py-5'>
       Testimonials
     </h2>
   </div>
 
-<?php echo do_shortcode("[testimonial_view id='1']"); ?>
+
+
+<?php echo do_shortcode("[testimonial_view id='2']"); ?>
 
 </div>
 
+<div class="row bg-secondary secondary-cta">
+  <div class="col col-md-5 px-md-5">
+    <h2 class="mb-0">Ready To Start?</h2>
+    <p class="my-3">lets have a chat about your dream home</p>
+    <a href="contact">
+      <button class="my-btn">Enquire Now</button>
+    </a>
 
+  </div>
+</div>
 
     <!-- Container Fluid Ends -->
   </div>

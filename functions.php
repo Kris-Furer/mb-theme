@@ -4,6 +4,7 @@ include 'theme-customizations.php';
 // Theme Supporters// turn on theme support
 add_theme_support('post-thumbnails');
 add_theme_support('woocommerce');
+add_theme_support( 'custom-logo' );
 
 // Menus
 register_nav_menus(['primary'=> 'primary']);
