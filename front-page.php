@@ -43,7 +43,7 @@
 
 
 <!-- Section 3 Starts  -->
-<div class="row section mt-5">
+<div class="row section my-5">
   <!-- Section 3 Image -->
   <div class="col-sm-12 col-md-6 pe-md-0 image-section order-md-2">
     <img class="section-img" src="<?php if (get_theme_mod( 'section_3_image' )) : echo get_theme_mod( 'section_3_image');
