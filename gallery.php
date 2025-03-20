@@ -10,8 +10,12 @@ Template Name: Gallery Page Template
  ?>
 <?php get_header(); ?>
 
-<div class="container-fluid mb-5 gallery-container">
-  <h1 class="display-1 m-5">Gallery</h1>
+<div class="gallery-container">
+  <div class="gallery-text text-section">
+  <h1 class=>Building That Speaks For Itself</h1>
+  <p>Take a look at our diverse range of building projects. Whether it’s a renovation, new construction, or commercial build, we are proud to share our completed works with you.</p>
+  </div>
+  
   <div class="row mx-md-5 my-5 mx-sm-0">
     <div class="col-12 mx-auto">
 

@@ -17,14 +17,15 @@ Template Name: Contact Page Template
     </div>
   </div>
 <!-- Page Body -->
-  <div class="row my-5">
-    <div class="col-12 col-lg-5 d-flex justify-content-lg-center align-items-lg-center">
-      <div class="d-flex flex-column flex-md-row justify-content-around d-lg-block col-12 col-lg-5 text-lg-start align-items-center text-center pt-5">
-        <div class="mb-lg-5">
+  <div class="contact-page-body">
+    
+  <div class="">
+      <div class="">
+        <div class="email-section">
           <h2 class='serif text-nowrap'>Flick Us An Email</h4>
           <p><?php echo get_theme_mod('contact_email')?></p>
         </div>
-        <div class="phone text-nowrap">
+        <div class="phone-section text-nowrap">
           <h2 class='serif'>Give Us A Bell</h2>
           <p><?php echo get_theme_mod('contact_phone')?></p>
         </div>
@@ -32,8 +33,8 @@ Template Name: Contact Page Template
     </div>
 
     <!-- Form Column -->
-    <div class="col-10 col-lg-5 my-lg-5 mx-auto my-5">
-        <h2 class="serif text-center my-3 d-none d-lg-block">Send Us a Message</h2>
+    <div class="form">
+        <h2 class="serif my-3 d-none d-lg-block">Send Us a Message</h2>
         <form id="contact-form" name="myForm" class="form " action="#" onsubmit="return validateForm()" method="POST" role="form">
 
             <div class="form-group">
@@ -51,8 +52,8 @@ Template Name: Contact Page Template
                 <textarea rows="6" cols="60" name="message" class="form-control" id="message" placeholder="Your message" tabindex="4"></textarea>
             </div>
 
-            <div class="text-center margin-top-25">
-                <button type="submit" class="my-btn red-fill my-3">Send Message</button>
+            <div>
+                <button type="submit" class="my-btn red-fill my-3">Send</button>
             </div>
 
           </form><!-- End form -->

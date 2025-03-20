@@ -33,10 +33,10 @@ Template Name: About Page Template
 
 
 
-<div class="row my-5 mx-md-5  d-flex align-items-center justify-content-center ">
+<div class="team-container">
     <?php
         query_posts(array(
-          'post_type' => team
+          'post_type' => 'team'
           )
         );
         ?>

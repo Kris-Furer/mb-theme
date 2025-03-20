@@ -2,9 +2,9 @@
 Theme Name:  Fancy Builders Theme
 Theme URI: http://yourwebsite.com/theme
 Author: Kris
-Author: http://yourwebsite.com/
+Author: http://krisfurer.vercel.app/
 Description: A minimal theme for a service based company
-Version:1.0
+Version:1.2
 License: GNU General Public License v2 or later
 Tags: minimal, cool
  */
@@ -38,7 +38,8 @@ body {
   color: var(--text_color);
   overflow-x: hidden !important;
   margin: auto;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Outfit", sans-serif;
+  font-weight: 200;
 }
 
 html {
@@ -49,33 +50,37 @@ img {
   max-width: 100%;
 }
 
-h1 {
-  font-family: 'Playfair Display', serif;
-}
-
-h2,
+h1,
 h2,
 .serif {
   font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  padding: 5px 0;
+  line-height: 1.2;
 }
 
 .bold {
   font-weight: 700 !important;
 }
 
+.text-center {
+  text-align: center;
+}
+
 p {
-  font-family: 'Barlow', sans-serif;
-  font-size: 1.2rem;
+  font-family: "Outfit", sans-serif;  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 200;
 }
 
 nav {
   height: 100px;
   color: black;
+  padding: 0 15px 0 15px;
   font-size: 19px;
-}
-
-nav a {
-  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .font-italic {
@@ -95,13 +100,23 @@ nav a {
 }
 
 .section {
-  height: 101vh;
+  height: auto;
+  margin: 0px 0 30px 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.hero-img,
-.landing-section {
-  height: 90vh;
+.text-section {
+  padding: 20px 15px;
+  opacity:0;
+ 
+
+  p {
+    padding: 15px 0;
+  }
 }
+
+
 
 .max-text {
   max-width: 500px;
@@ -109,10 +124,8 @@ nav a {
 
 .navbar-nav ul {
   display: flex;
-}
-
-.menu-footer-container ul {
-  padding-left: 0 !important;
+  gap: 40px;
+  align-items: center;
 }
 
 .navbar-brand {
@@ -121,8 +134,16 @@ nav a {
 
 .my-btn {
   padding: 12px 30px;
+  display: inline-block;
   cursor: pointer;
+  font-weight: 400;
 }
+.secondary-cta,
+.section .my-btn {
+  margin:12px 0;
+}
+
+
 
 .my-btn,
 .contact-btn a,
@@ -133,7 +154,8 @@ nav a {
   border: 1px solid var(--btn-color);
 }
 
-.my-btn:hover, .contact-btn a:hover {
+.my-btn:hover,
+.contact-btn a:hover {
   background-color: var(--my-background);
   color: var(--btn-color);
   border: 1px solid var(--btn-color);
@@ -163,6 +185,12 @@ nav a {
   padding: 10vw 0;
 }
 
+.team-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap:30px;
+}
+
 .profile-img {
   width: 100%;
   height: 28vw;
@@ -174,13 +202,24 @@ nav a {
   object-fit: cover !important;
 }
 
-.footer-logo, .footer-heading {
+.footer-logo {
+  font-size: 30px;
+}
+
+
+.footer-logo,
+.footer-heading {
   line-height: 2rem;
 }
 
 .secondary-cta {
-  padding: 7rem 0;
+  padding: 7rem 15px;
   color: white;
+
+  p {
+    padding: 15px 0;
+  }
+
 }
 
 .testimonial-pic {
@@ -194,24 +233,58 @@ nav a {
 
 .testimonial-section {
   background-color: rgb(241, 241, 241);
-  padding: 10vh 0;
+  padding: 10vh 15px;
 }
 
-.strong-view.wpmtst-default .wpmtst-testimonial, .strong-view.wpmtst-default .wpmtst-testimonial, .wpmtst-testimonial-inner {
+.strong-view.wpmtst-default .wpmtst-testimonial,
+.strong-view.wpmtst-default .wpmtst-testimonial,
+.wpmtst-testimonial-inner {
   border: none !important;
 }
 
 .gallery-container {
-  margin-bottom: 30vw !important;
+  margin: 15px;
+
+  .gallery-text {
+    padding: 30px 0;
+    max-width: 700px;
+    height: 46vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
 }
 
-footer, .footer-heading .footer-logo {
+
+footer,
+.footer-heading .footer-logo {
   color: var(--footer_text_color);
 }
 
 footer {
-  font-weight: 100;
-  background-color: var(--footer_color)
+  padding:40px 0;
+  background-color: var(--footer_color);
+
+  .contain {
+    display: flex;
+    flex-direction: column;
+    font-weight: 100;
+    row-gap: 20px;
+    padding: 30px;
+  }
+
+  p, a {
+    font-weight: 250;
+  }
+
+
+
+
+}
+
+.footer-nav {
+  padding-left: 0;
 }
 
 footer p {
@@ -221,6 +294,14 @@ footer p {
 
 .footer-heading {
   font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.socials {
+  display: flex;
+  padding-top:20px;
+  gap:15px;
 }
 
 .mob-button {
@@ -229,7 +310,9 @@ footer p {
   transition: .5s all ease;
 }
 
-.mob-button:hover, .mob-close:hover, .mob-inner a:hover {
+.mob-button:hover,
+.mob-close:hover,
+.mob-inner a:hover {
   color: var(--accent);
   font-weight: bolder;
   transform: scale(1.1);
@@ -237,10 +320,108 @@ footer p {
 
 .my-mob-overlay {
   display: none;
-  z-index: 20000;
+  z-index: 200;
+  text-align: center;
 }
 
+
+/* contact page  */
+.contact-page-body {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 15px;
+
+  h2,
+  h1 {
+    font-size: 30px;
+  }
+
+  input,
+  textarea {
+    padding: 16px 4px;
+    width: 100%;
+    border: none;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #adabab;
+  }
+
+  form {
+    padding: 20px 0;
+    max-width: 500px;
+  }
+
+  .email-section,
+  .phone-section {
+    margin-bottom: 35px;
+  }
+
+}
+
+
+
+/* ------- */
+
+
+
+
 /* Media Queries ::::::::::::::::::::::::*/
+
+@media (min-width: 992px) {
+
+  .section {
+    flex-direction: row;
+    height: 100vh;
+    align-items: center;
+
+
+    .text-section {
+      width: 40%;
+      min-width: 470px;
+    }
+
+    .image-section {
+      flex-grow: 1;
+    }
+
+    h1,
+    h2 {
+      font-size: 55px;
+    }
+  }
+
+  .contact-page-body {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px 30px;
+
+  }
+
+
+
+  .section-3 .image-section,
+  .landing-section .image-section {
+    order: 2;
+  }
+
+  footer {
+    .contain {
+      flex-direction: row;
+      justify-content: space-around;
+      margin: auto;
+      max-width: 1400px;
+    }
+    
+    .text-center {
+     
+      text-align: left;
+     
+    }
+  }
+
+}
+
+/* Large screens */
 @media (min-width:1400px) {
   .profile-img {
     height: 400px;
@@ -271,6 +452,7 @@ footer p {
     padding-left: 0;
   }
 
+
   .my-mob-overlay {
     justify-content: center;
     flex-direction: column;
@@ -289,11 +471,16 @@ footer p {
   }
 
   @media (max-width:768px) {
-    .section-img, .hero-img {
+
+    .section-img,
+    .hero-img {
       height: auto;
       max-height: 70vh;
       width: 100%;
-      
+    }
+
+    .navbar {
+      padding: 0px 14px;
     }
 
     .custom-logo-link {
@@ -316,5 +503,6 @@ footer p {
       max-width: 98%
     }
   }
+}
 
-  @media (max-width:400) {}
+@media (max-width:400) {}
